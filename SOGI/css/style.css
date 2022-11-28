@@ -241,6 +241,9 @@ input, textarea {
 }
  
 @media all and (max-width: 480px){
+  .main {
+    width: 98%;
+  }
   .header {
     height: 60px;
   }
@@ -248,6 +251,11 @@ input, textarea {
     font-weight: bold;
     font-size: 10px;
     margin-right: 14px;
+  }
+  .header-list a:hover {
+    opacity: 0.8;
+    font-size: 14px;
+    /*color: blueviolet;*/
   }
   .header-logo img {
     width: 48px;
@@ -262,6 +270,10 @@ input, textarea {
   .section h1 strong {
     padding-left: 108px;
     font-size: 40px;
+  }
+  .item h2 {
+    font-size: 14px;
+    letter-spacing: 0;
   }
   .btn h2 {
     font-size: 12px;
