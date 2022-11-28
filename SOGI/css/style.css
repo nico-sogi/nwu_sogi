@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: #FAF0E6;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+/*header*/
+.header {
+  background-color: #EE82EE;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+  opacity: 0.7;
+}
+nav ul li {
+  font-size: 24px;
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+.header-logo img {
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
+}
+.header-list a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.5s;
+  opacity: 0.5;
+}
+.header-list a:hover {
+  opacity: 0.8;
+  font-size: 30px;
+  /*color: blueviolet;*/
+}
+/*section*/
+.section {
+  background-image: url(../images/image2.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+.section h1 {
+  color: #EE82EE;
+  padding: 100px 0 180px 0;
+  font-size: 108px;
+  text-align: center;
+  text-shadow: #000 4px 2px 4px;
+}
+.section h1 strong {
+  padding-left: 72px;
+  font-size: 120px;
+}
+/*main*/
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+#about {
+  padding-top: 80px;
+}
+.section-title {
+  text-align: center;
+  border-bottom: 3px solid #EE82EE;
+  padding: 0 0 12px 0px;
+  margin-bottom: 48px;
+}
+/*contact*/
+.element {
+  margin: 0 auto;
+  width: 90%;
+}
+.item {
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 12px 0;
+}
+.item h2 {
+  letter-spacing: 0.18em;
+  width: 40%;
+  height: 36px;
+  padding: 48px 0;
+}
+input {
+  height: 36px;
+}
+.message {
+  height: 72px;
+}
+.btn {
+  height: 72px;
+  margin: 36px 0 108px;
+  text-align: center;
+}
+.submit {
+  background-color: #EE82EE;
+  width: 144px;
+  height: 36px;
+  transition: all 0.5s;
+  opacity: 0.7;
+}
+.submit:hover {
+  width: 180px;
+  height: 48px;
+  border: 4px solid #000;
+  opacity: 1;
+}
+input, textarea {
+  width: 40%;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 18px;
+}
+.gform {
+  transition: all 1.0s;
+  opacity: 0.8;
+}
+.gform:hover {
+  opacity: 1.0;
+  font-weight: bold;
+}
+.twitter {
+  transition: all 1.0s;
+  opacity: 0.8;
+}
+.twitter:hover {
+  opacity: 1.0;
+  font-weight: bold;
+}
+/*footer*/
+.footer {
+  height: 108px;
+  text-align: center;
+  background-color: #EE82EE;
+}
+.footer strong {
+  font-size: 32px;
+}
+.footer h3:hover {
+  font-size: 19px;
+  opacity: 0.8;
+}
+.footer h3 {
+  padding-right: 12px;
+  letter-spacing: 0.12rem;
+  font-size: 18px;
+}
+.footer p {
+  font-size: 18px;
+}
+.sns {
+  display: flex;
+  justify-content: center;
+}
+
+.element {
+  /* 最初は非表示 */
+  transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 2s, opacity 1s, visibility 1s;
+}
+/* フェードイン時に入るクラス */
+.is-fadein {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/*media*/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  body {
+    font-size: 12px;
+  }
+}
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .item h2 {
+    font-size: 22px;
+    letter-spacing: 0;
+  }
+}
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+  nav ul li {
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 18px;
+  }
+  .header-logo img {
+    width: 48px;
+    height: 48px;
+  }
+  .section h1 {
+    padding: 220px 24px;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: #000 4px 2px 4px;
+  }
+  .section h1 strong {
+    padding-left: 108px;
+    font-size: 54px;
+  }
+  /* .element h2 {
+    text-align: center;
+  } */
+  .item h2 {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  .form {
+    display: block;
+  }
+  .form input {
+    text-align: center;
+    width: 100%;
+  }
+  .message {
+  }
+}
+ 
+@media all and (max-width: 480px){
+  .header {
+    height: 60px;
+  }
+  nav ul li {
+    font-weight: bold;
+    font-size: 10px;
+    margin-right: 14px;
+  }
+  .header-logo img {
+    width: 48px;
+    height: 48px;
+  }
+  .section h1 {
+    padding: 220px 24px;
+    font-size: 36px;
+    text-align: center;
+    text-shadow: #000 4px 2px 4px;
+  }
+  .section h1 strong {
+    padding-left: 108px;
+    font-size: 40px;
+  }
+  .btn h2 {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+  .form {
+    display: block;
+  }
+  .form input {
+    text-align: center;
+    width: 100%;
+  }
+  .message {
+    width: 100%;
+    height: 108px;
+  }
+}
